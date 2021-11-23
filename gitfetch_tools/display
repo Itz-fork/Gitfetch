@@ -1,0 +1,24 @@
+#!/usr/bin/bash
+
+# Colors
+BOLD="\033[;1m"
+RESET="\033[0;0m"
+
+# Thanks to manatwork for his answer
+output_gitfetch() {
+  local s=("$@") b w
+  for lmao in "${s[@]}"; do
+    ((w<${#lmao})) && { b="$lmao"; w="${#lmao}"; }
+  done
+  tput setaf 3
+  echo -e "╔═${b//?/═}═╗
+║ ${b//?/ } ║"
+  for lyf in "${s[@]}"; do
+    printf "║ $BOLD%s%*s%s ║\n" "$(tput setaf 4)" "-$w" "$lyf" "$(tput setaf 3)"
+  done
+  echo -e "║ ${b//?/ } ║
+╚═${b//?/═}═╝$RESET"
+  tput sgr 0
+}
+
+output_gitfetch "$@"
