@@ -23,14 +23,20 @@ pip install git+https://github.com/Itz-fork/Gitfetch.git
 
 ## Usage 👀
 
-It's simple btw,
-```
-gitfetch [your github username]
-```
+- **CLI Usage 👇,**
+  - ```
+    gitfetch [your github username]
+    ```
+  - Ex:
+    ```gitfetch Itz-fork```
 
-Ex:
-  ```gitfetch Itz-fork```
+- **Use it as a python module 👇,**
+  - ```python
+    from gitfetch_tools import GitFetch
 
+    git = GitFetch("Your-Github-Username")
+    print(git.fetch_user_data())
+    ```
 
 ## FAQ 😕
 
