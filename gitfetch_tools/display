@@ -11,10 +11,10 @@ output_gitfetch() {
     ((w<${#lmao})) && { b="$lmao"; w="${#lmao}"; }
   done
   tput setaf 3
-  echo -e "$BOLD╔═${b//?/═}═╗
+  echo -e "╔═${b//?/═}═╗
 ║ ${b//?/ } ║"
   for lyf in "${s[@]}"; do
-    printf "║ %s%*s%s ║\n" "$(tput setaf 4)" "-$w" "$lyf" "$(tput setaf 3)"
+    printf "║ $BOLD%s%*s%s ║\n" "$(tput setaf 4)" "-$w" "$lyf" "$(tput setaf 3)"
   done
   echo -e "║ ${b//?/ } ║
 ╚═${b//?/═}═╝$RESET"
