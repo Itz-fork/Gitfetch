@@ -40,5 +40,14 @@ pip install git+https://github.com/Itz-fork/Gitfetch.git
 
 ## FAQ 😕
 
+#### Q: I can't install Gitfetch cli, what to do?
+
+**A:** If you got an error like `command not found: gitfetch` then install it with `sudo` permissions.
+      
+  - ```
+    sudo pip install gitfetch
+    ```
+
 #### Q: Can I customize it?
+
 **A:** Yeah, check [fetch.py](https://github.com/Itz-fork/Gitfetch/blob/master/gitfetch_tools/fetch.py) and [display](https://github.com/Itz-fork/Gitfetch/blob/master/gitfetch_tools/display) files.
